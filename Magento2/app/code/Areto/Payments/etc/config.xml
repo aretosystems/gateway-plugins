@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <areto_cc>
+                <active>0</active>
+                <model>Areto\Payments\Model\Method\Cc</model>
+                <title>Credit/Debit Card</title>
+                <api_id>0</api_id>
+                <api_session>0</api_session>
+                <order_status>processing</order_status>
+                <allowspecific>0</allowspecific>
+                <group>areto</group>
+            </areto_cc>
+            <areto_qp>
+                <active>0</active>
+                <model>Areto\Payments\Model\Method\Qp</model>
+                <title>Credit/Debit Card</title>
+                <api_id>0</api_id>
+                <api_session>0</api_session>
+                <terms_url>http://magento.com/</terms_url>
+                <order_status>processing</order_status>
+                <allowspecific>0</allowspecific>
+                <group>areto</group>
+            </areto_qp>
+        </payment>
+    </default>
+</config>

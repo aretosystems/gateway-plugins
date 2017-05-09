@@ -1,0 +1,5 @@
+1) Unpack package
+2) Upload directory "woocommerce-gateway-areto" to wp-content/plugins of your site.
+3) Go to WordPress admin. Open "Plugins", find "WooCommerce Areto Systems Payment Gateway" and activate.
+4) Go to WooCommerce->Settings->Checkout and enable/configure plugins.
+

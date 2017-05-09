@@ -1,0 +1,5 @@
+1) Unpack package to Magento root directory
+2) Clean cache
+3) Enable and configure module in admin backend:
+System->Configuration->Sales->Payments Methods
+

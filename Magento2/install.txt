@@ -1,0 +1,9 @@
+1) Unpack package to Magento2 root directory
+2) Execute commands in shell:
+php bin/magento module:enable Areto_Payments --clear-static-content
+php bin/magento setup:upgrade
+php bin/magento cache:clean
+3) Enable and configure module in admin backend:
+Stores->Configuration->Sales->Payments Methods
+4) Clean cache
+

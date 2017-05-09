@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="areto" translate="label" sortOrder="110">
+            <label>Areto Systems</label>
+        </tab>
+
+        <section id="payment">
+            <group id="areto_payments" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Areto Systems Payment Methods</label>
+                <comment><![CDATA[Accept credit and debit cards in your Magneto store. 30 different solutions available in over 140 countries]]></comment>
+                <attribute type="expanded">1</attribute>
+                <fieldset_css>complex</fieldset_css>
+                <frontend_model>Magento\Paypal\Block\Adminhtml\System\Config\Fieldset\Group</frontend_model>
+                <include path="Areto_Payments::system/areto_cc.xml"/>
+                <include path="Areto_Payments::system/areto_qp.xml"/>
+            </group>
+        </section>
+    </system>
+</config>

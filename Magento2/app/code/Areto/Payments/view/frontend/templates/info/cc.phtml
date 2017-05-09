@@ -1,0 +1,13 @@
+<?php
+// @codingStandardsIgnoreFile
+/**
+ * @var $block \Areto\Payments\Block\Info\Cc
+ */
+?>
+<?php
+$_info = $block->getInfo();
+?>
+
+<dl class="payment-method areto_cc">
+        <?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?><br/>
+</dl>

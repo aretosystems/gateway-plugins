@@ -1,0 +1,16 @@
+#cc_form {
+    display: block;
+}
+
+#cc_form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#cc_form #date_of_birth {
+    background-color: white;
+    cursor: pointer;
+}

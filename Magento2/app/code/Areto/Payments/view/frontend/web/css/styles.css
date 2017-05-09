@@ -1,0 +1,46 @@
+#payment_form_areto_cc {
+    width: 70%;
+    /* margin: 0 auto; */
+}
+
+#payment_form_areto_cc .fields.group-2 .field {
+    width: 47% !important;
+}
+
+#payment_form_areto_cc .fields.group-2 .field:nth-child(0) {
+    float: left;
+}
+
+#payment_form_areto_cc .fields.group-2 .field:nth-child(1) {
+    float: right;
+}
+
+#payment_form_areto_cc .field.required label.label {
+    font-weight: 600;
+}
+
+#payment_form_areto_cc .field.required label.label:after {
+    content: '*';
+    color: #e02b27;
+    font-size: 1.2rem;
+    margin: 0 0 0 5px;
+}
+
+#payment_form_areto_cc label.error {
+    color: #e02b27;
+}
+
+#areto-cc-cards {
+    display: inline-block;
+    background: url(../images/creditcards_logo.png) no-repeat;
+    width: 332px;
+    height: 51px;
+}
+
+#areto-cc-logo {
+    /* */
+}
+
+#areto-qp-logo {
+    /* */
+}

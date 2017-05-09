@@ -1,0 +1,12 @@
+<?php
+/** @var $this Areto_Payments_Block_Form_Quickpay */
+?>
+
+<?php $_code=$this->getMethodCode() ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+    <li>
+        <div style="float:left">
+            <?php echo Mage::helper('areto')->__('You will be redirected to <a target="_blank" href="http://www.aretosystems.com">Areto Systems QuickPay</a> website when you place an order.'); ?>
+        </div>
+    </li>
+</ul>

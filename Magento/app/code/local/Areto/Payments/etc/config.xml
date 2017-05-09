@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Areto_Payments>
+            <version>1.1.0</version>
+        </Areto_Payments>
+    </modules>
+
+    <global>
+        <models>
+            <areto>
+                <class>Areto_Payments_Model</class>
+                <resourceModel>areto_mysql4</resourceModel>
+            </areto>
+        </models>
+
+        <blocks>
+            <areto>
+                <class>Areto_Payments_Block</class>
+            </areto>
+        </blocks>
+
+        <helpers>
+            <areto>
+                <class>Areto_Payments_Helper</class>
+            </areto>
+        </helpers>
+
+        <resources>
+            <areto_setup>
+                <setup>
+                    <module>Areto_Payments</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </areto_setup>
+            <areto_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </areto_write>
+            <areto_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </areto_read>
+        </resources>
+    </global>
+
+    <default>
+        <payment>
+            <areto_cc>
+                <active>0</active>
+                <model>areto/method_CC</model>
+                <title>Credit/Debit Card Payments</title>
+                <allowspecific>0</allowspecific>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <order_status>processing</order_status>
+                <useccv>1</useccv>
+            </areto_cc>
+            <areto_quickpay>
+                <active>0</active>
+                <model>areto/method_Quickpay</model>
+                <title>Credit/Debit Card Payments</title>
+                <allowspecific>0</allowspecific>
+                <order_status>processing</order_status>
+                <terms_url>http://magento.com</terms_url>
+            </areto_quickpay>
+        </payment>
+    </default>
+
+    <frontend>
+        <routers>
+            <areto>
+                <use>standard</use>
+                <args>
+                    <module>Areto_Payments</module>
+                    <frontName>areto</frontName>
+                </args>
+            </areto>
+        </routers>
+
+        <!-- Translations... -->
+        <translate>
+            <modules>
+                <Areto_Payments>
+                    <files>
+                        <default>Areto_Payments.csv</default>
+                    </files>
+                </Areto_Payments>
+            </modules>
+        </translate>
+
+        <!-- Updates layout... -->
+        <layout>
+            <updates>
+                <areto>
+                    <file>areto.xml</file>
+                </areto>
+            </updates>
+        </layout>
+    </frontend>
+</config>

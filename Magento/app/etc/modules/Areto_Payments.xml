@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Areto_Payments>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Payment />
+            </depends>
+            <version>1.1.0</version>
+        </Areto_Payments>
+    </modules>
+</config>

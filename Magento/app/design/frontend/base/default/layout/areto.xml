@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <!--CSS and JS Files-->
+        <reference name="head">
+            <action method="addItem"><type>js_css</type><name>flatpickr/flatpickr.min.css</name></action>
+            <action method="addItem"><type>js</type><name>flatpickr/flatpickr.min.js</name></action>
+        </reference>
+    </default>
+</layout>
