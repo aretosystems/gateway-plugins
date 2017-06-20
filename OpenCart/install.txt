@@ -1,7 +1,14 @@
 1) Unpack package
+
 2) Upload files and directories to OpenCart web root.
+
 3) Go to OpenCart admin backend. 
-Go to Extensions->Extensions. Select "Payments" in "Choose the extension type" field. Find "Areto Systems" extension, click install or configure.
+4) 
+Go to Extensions->Extensions. Select "Payments" in "Choose the extension type" field. 
+5) Find "Areto Systems" extension, click install or configure.
 
 
 
+
+
+Supports OpenCart 2.3+/2.3.X.X

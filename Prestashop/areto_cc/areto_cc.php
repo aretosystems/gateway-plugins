@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `" . _DB_PREFIX_ . "aretocc_orders` (
     private function _displayForm()
     {
         $this->_html .= '<img src="../modules/areto_cc/logo.png" style="float:left; margin-right:15px;" width="86" height="49"><b>'
-            . $this->l('This module allows you to accept online credit card payments through') . ' <a href="http://www.aretosystems.com">AretoPay</a></b><br /><br />';
+            . $this->l('This module allows you to accept online credit card payments through') . ' <a href="https://www.aretosystems.com">areto.systems</a></b><br /><br />';
 
         $this->_html .=
             '<form action="' . Tools::htmlentitiesUTF8($_SERVER['REQUEST_URI']) . '" method="post">

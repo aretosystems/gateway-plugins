@@ -72,8 +72,6 @@ class WC_Gateway_Areto_Payment extends WC_Payment_Gateway {
 			$icon .= '<img src="' . WC_HTTPS::force_https_url( WC()->plugin_url() . '/assets/images/icons/credit-cards/jcb.png' ) . '" alt="JCB" />';
 			$icon .= '<img src="' . WC_HTTPS::force_https_url( WC()->plugin_url() . '/assets/images/icons/credit-cards/diners.png' ) . '" alt="Diners" />';
 		}
-
-		$icon .= '<a rel="external" href="http://www.aretosystems.com/"><img width="68" src="' . WC_HTTPS::force_https_url( $this->icon ) . '" alt="Online payment services - Areto Systems"  /></a>';
 		return apply_filters( 'woocommerce_gateway_icon', $icon, $this->id );
 	}
 
@@ -200,13 +198,6 @@ class WC_Gateway_Areto_Payment extends WC_Payment_Gateway {
 			return false;
 		}
 
-		// Validate phone number
-		$matches = array();
-		preg_match('/^00/\'', $order->billing_phone, $matches);
-		if (!isset($matches[0])) {
-			$this->add_message( __( 'Phone number should have 2 leading zeros - before international country code', 'woocommerce-gateway-areto' ), 'error' );
-			return false;
-		}
 
 		$card_number    = isset( $_POST['areto-card-number'] ) ? wc_clean( $_POST['areto-card-number'] ) : '';
 		$card_cvc       = isset( $_POST['areto-card-cvc'] ) ? wc_clean( $_POST['areto-card-cvc'] ) : '';

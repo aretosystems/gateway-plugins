@@ -1,5 +1,7 @@
 1) Unpack package
+
 2) Upload directories "areto_cc" and "areto_quickpay" to "modules" directory of your site.
+
 3) Upload PHP SDK and unpack into "vendor" directory of your site
 4) Go to Prestashop admin backend. 
 5) Go to "Modules and Services"->"Payments and Gateways", 
