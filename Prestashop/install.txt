@@ -1,3 +1,5 @@
+INSTALLATION INSTRUCTIONS
+
 1) Unpack package
 2) Upload directories "areto_cc" and "areto_quickpay" (from modules folder) to "modules" directory of your site.
 3) Upload folders from vendor folder to "vendor" directory of your site
