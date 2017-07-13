@@ -22,10 +22,11 @@ switch ((int)$result['Body']['OrderStatus']) {
         echo 'Payment has been declined';
         break;
     case 1;
-    case 4:
-        // Payment is success
+	  // Payment is success
         echo sprintf('Payment success: %s. InternalOrderID: %s', $result['Body']['OrderDescription'], $result['Body']['InternalOrderID']);
         break;
+    case 4:
+      // pending
     default:
         echo 'Unknown order status';
         break;
