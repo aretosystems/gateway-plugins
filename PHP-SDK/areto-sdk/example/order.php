@@ -32,9 +32,15 @@ $areto = new Areto();
 // Set IDs
 $areto->setEnvironment($api_id, $api_session);
 
+$items_array = array();
+for ($i=0, $n=sizeof($_POST['product-code']); $i<$n; $i++) {
+    $items_array[] =  urlencode($_POST['product-code'][$i]).','.urlencode($_POST['product-qty'][$i]).','.urlencode($_POST['product-name'][$i]);
+}
+
 $data = array(
     'order_id' => '1000001',
     'amount' => number_format($_POST['amount'], 2),
+    'items' => implode('|', $items_array),
     'currency_code' => $_POST['currency_code'],
     'CVC' => $_POST['cvv'],
     'expiry_month' => $_POST['expiry-month'],
