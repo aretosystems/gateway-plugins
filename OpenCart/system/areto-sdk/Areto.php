@@ -37,6 +37,7 @@ class Areto
         $default = array(
             'order_id' => '',
             'amount' => 0,
+            'items' => '',
             'currency_code' => '',
             'CVC' => '',
             'expiry_month' => '',
@@ -70,6 +71,7 @@ class Areto
             'Session' => $this->api_session,
             'OrderId' => $data['order_id'],
             'Amount' => $data['amount'],
+            'Items' => $data['items'],
             'CurrencyCode' => $data['currency_code'],
             'CCVC' => $data['CVC'],
             'CCExpiryMonth' => $data['expiry_month'],
