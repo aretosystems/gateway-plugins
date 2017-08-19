@@ -79,10 +79,17 @@ class ControllerExtensionPaymentAretocc extends Controller
         $validate_url = curl_exec($ch);
         curl_close($ch);
 
+	$products = $this->cart->getProducts();
+        $items_array = array();
+        foreach ($products as $item) {
+            $items_array[] =  urlencode($item['model']).','.urlencode($item['quantity']).','.urlencode($item['name']);
+        }
+	    
         // Sale Request
         $data = array(
             'order_id' => $order['order_id'],
             'amount' => number_format($order['total'], 2),
+	    'items' => implode('|', $items_array),
             'currency_code' => $order['currency_code'],
             'CVC' => $cardCVC,
             'expiry_month' => $cardExpiry[0],
