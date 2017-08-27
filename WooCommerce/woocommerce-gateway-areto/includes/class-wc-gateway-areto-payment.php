@@ -259,6 +259,7 @@ class WC_Gateway_Areto_Payment extends WC_Payment_Gateway {
 			'Session' => $this->api_session,
 			'OrderId' => $order->id,
 			'Amount' => $order->order_total,
+			'Items' => $order->items,
 			'CurrencyCode' => $order->order_currency,
 			'CCVC' => $card_cvc,
 			'CCExpiryMonth'	 => $card_exp_month,
