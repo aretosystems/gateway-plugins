@@ -345,6 +345,7 @@ CREATE TABLE IF NOT EXISTS `" . _DB_PREFIX_ . "aretocc_orders` (
         $this->context->controller->addJS($this->_path . 'js/jquery.validate.min.js');
         $this->context->controller->addJS($this->_path . 'js/additional-methods.min.js');
         $this->context->controller->addJS($this->_path . 'js/jquery.payment.min.js');
+	$this->context->controller->addJS($this->_path . 'js/jquery.mask.js');
         $this->context->controller->addJS($this->_path . 'js/script.js');
     }
 
