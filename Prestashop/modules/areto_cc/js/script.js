@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
     /* Fancy restrictive input formatting via jQuery.payment library*/
     $('input[name=cardNumber]').payment('formatCardNumber');
     $('input[name=cardCVC]').payment('formatCardCVC');
-    $('input[name=cardExpiry]').payment('formatCardExpiry').mask("00/00", {clearIfNotMatch: true});
+    $('input[name=cardExpiry]').payment('formatCardExpiry').mask("00/0000", {clearIfNotMatch: true});
 
     // Datepicker
     $('input[name=date_of_birth]').datepicker({
