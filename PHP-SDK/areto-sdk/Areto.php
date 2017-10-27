@@ -57,8 +57,6 @@ class Areto
             'client_forward_IP' => isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '',
             'client_DOB' => '',
             'client_phone' => '',
-            'token' => '',
-            'create_token' => '0',
             'return_url' => ''
         );
 
