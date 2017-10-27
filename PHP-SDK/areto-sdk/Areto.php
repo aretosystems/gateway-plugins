@@ -89,8 +89,6 @@ class Areto
             'ClientForwardIP' => $data['client_forward_IP'],
             'ClientDOB' => $data['client_DOB'], //yyyy-mm-dd
             'ClientPhone' => $data['client_phone'],
-            'CCToken' => $data['token'],
-            'CreateToken' => $data['create_token'],
             'ReturnUrl' => $data['return_url'],
         );
 
