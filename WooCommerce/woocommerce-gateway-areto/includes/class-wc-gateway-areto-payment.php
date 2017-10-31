@@ -251,7 +251,12 @@ class WC_Gateway_Areto_Payment extends WC_Payment_Gateway {
 			return false;
 		}
 		$return_url = $response->getBody();
-
+		
+		$items_array = array();
+		foreach ( WC()->cart->get_cart() as $cart_item ) {
+			$items_array[] =  urlencode($cart_item['data']->get_id()).','.urlencode($cart_item['quantity']).','.urlencode($cart_item['data']->get_title());
+		}
+		
 		// Do request
 		$url = 'https://pay.aretosystems.com/api/sale/v1';
 		$data = array(
@@ -259,7 +264,7 @@ class WC_Gateway_Areto_Payment extends WC_Payment_Gateway {
 			'Session' => $this->api_session,
 			'OrderId' => $order->id,
 			'Amount' => $order->order_total,
-			'Items' => $order->items,
+			'Items' => implode('|', $items_array),
 			'CurrencyCode' => $order->order_currency,
 			'CCVC' => $card_cvc,
 			'CCExpiryMonth'	 => $card_exp_month,
